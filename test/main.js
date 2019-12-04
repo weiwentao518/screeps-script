@@ -2,15 +2,11 @@ var { createCreeps } = require('common');
 var roleHarvester = require('role.harvester');
 var roleUpgrader = require('role.upgrader');
 var roleAttacker = require('role.attacker');
+var roleBuilder = require('role.builder');
 
 const spawn1 = Game.spawns['Spawn1']
 
 module.exports.loop = function () {
-
-
-    for(var name in Game.rooms) {
-      console.log('Room "'+name+'" has '+Game.rooms[name].energyAvailable+' energy');
-    }
 
     createCreeps(spawn1)
 
