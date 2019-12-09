@@ -1,6 +1,8 @@
+var { room1 } = require('./constants')
+
 var structureTower = {
   work: function () {
-      const towers = Game.rooms['sim'].find(FIND_MY_STRUCTURES, {
+      const towers = room1.find(FIND_MY_STRUCTURES, {
           filter: (structure) => structure.structureType === STRUCTURE_TOWER
       })
 

@@ -1,4 +1,5 @@
 var { createCreeps } = require('common');
+var { room1 } = require('constants')
 var structureTower = require('structure.tower');
 var roleHarvester = require('role.harvester');
 var roleUpgrader = require('role.upgrader');
@@ -7,7 +8,8 @@ var roleBuilder = require('role.builder');
 
 const spawn1 = Game.spawns['Spawn1']
 
-console.log('energyAvailable', Game.rooms['sim'].energyAvailable)
+console.log('energyAvailable', room1.energyAvailable)
+console.log('rooms', Object.keys(Game.rooms)[0])
 
 module.exports.loop = function () {
 
@@ -27,6 +29,7 @@ module.exports.loop = function () {
             // }
         }
         if(creep.memory.role == 'upgrader') {
+            // roleHarvester.run.call(this, creep)
             roleUpgrader.run(creep);
         }
         if(creep.memory.role == 'builder') {

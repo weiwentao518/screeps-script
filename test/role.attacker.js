@@ -1,6 +1,8 @@
+var { room1 } = require('./constants')
+
 var roleAttacker = {
   run: function(creep) {
-      const closestHostile = Game.rooms['sim'].find(FIND_HOSTILE_CREEPS)
+      const closestHostile = room1.find(FIND_HOSTILE_CREEPS)
       console.log(JSON.stringify({
           len: closestHostile.length
       }))
